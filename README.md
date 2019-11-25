@@ -29,7 +29,7 @@ Mézclalo con tu código con `git merge origin/master` (en su caso, resuelve con
 
 #### No soy colaborador
 
-- Haz `git clone` del repositorio remoto en local
+- Haz Fork del repositorio `ies-romerovargas-team/ejercicios-arrays` y trabaja sobre tu propio repositorio
 
 - Sincroniza tu repositorio local con **tu** repositorio remoto en GitHub con `git remote add origin https://gitbub.com/*tu_usuario*/*tu_repositorio*`
 
@@ -39,4 +39,6 @@ Mézclalo con tu código con `git merge origin/master` (en su caso, resuelve con
 
 - Lanza un commit con los modificaciones y documentalas correctamente con un mensaje completo `git commit -m <mensaje>`
 
-- Accede a tu repositorio en Github.com y pulsa el botón "Pull Request"
+- Accede a tu repositorio en Github.com y localiza y pulsa sobre el botón "Pull Request" (recuerda que tu repositorio es un Fork del repositorio del proyecto colaborativo.
+
+- Completa los datos y envía un mensaje al administrador del proyecto quien decidirá si absorve o no tus cambios propuestos 
