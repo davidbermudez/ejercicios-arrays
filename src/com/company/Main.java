@@ -131,7 +131,7 @@ public class Main {
                 case 8: {
                     int[] a;
                     a = new int[8];
-                    rellenaAleatorio2(a, 5, 15);
+                    rellenaAleatorio2(a, -2, 15);
                     escribeArray(a);
                     escribeArray(eliminaRepetidos(a));
                 }
