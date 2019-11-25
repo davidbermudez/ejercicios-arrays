@@ -267,16 +267,17 @@ public class Main {
         int[] b;
         b = new int[a.length];
         int j = 0;
+        int maxA = maxArray(a);
         for (int i = 0; i < a.length; i++) {
             if (contiene(b, a[i])) {
-                b[j] = 0;
+                b[j] = maxA + 1;
                 j++;
             } else {
                 b[j] = a[i];
                 j++;
             }
         }
-        b = eliminaElementosArray(b, 0);
+        b = eliminaElementosArray(b, maxA + 1);
         return b;
     }
 
