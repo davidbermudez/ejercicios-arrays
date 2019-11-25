@@ -8,15 +8,23 @@ El repositorio contiene la versión actualizada por los colaboradores
 
 ### Primera vez:
 
-### Después de la primera vez:
-
 #### Soy Colaborador
 
 En tu perfil de Github debes tener ya acceso completo al repositorio.
 
-Haz `git clone` del repositorio remoto en local
+- Haz `git clone` del repositorio remoto en local
 
-Sincroniza tu repositorio local con el remoto con `git remote add origin https://github.com/...`
+- Sincroniza tu repositorio local con el remoto con `git remote add origin https://github.com/ies-romerovargas-team/ejericios-arrays`
+
+#### No soy colaborador
+
+- Haz Fork del repositorio `ies-romerovargas-team/ejercicios-arrays` y trabaja sobre tu propio repositorio
+
+- Sincroniza tu repositorio local con **tu** repositorio remoto en GitHub con `git remote add origin https://gitbub.com/*tu_usuario*/*tu_repositorio*`
+
+### Después de la primera vez:
+
+#### Soy Colaborador
 
 Haz `git flecht origin` para traer a tu rama origin/master (local) los cambios que pueda haber en el repositorio remoto
 
@@ -31,10 +39,6 @@ Mézclalo con tu código con `git merge origin/master` (en su caso, resuelve con
 - Sincroniza los cambios con el repositorio remoto `git push origin master`
 
 #### No soy colaborador
-
-- Haz Fork del repositorio `ies-romerovargas-team/ejercicios-arrays` y trabaja sobre tu propio repositorio
-
-- Sincroniza tu repositorio local con **tu** repositorio remoto en GitHub con `git remote add origin https://gitbub.com/*tu_usuario*/*tu_repositorio*`
 
 - Modifica, actualiza o subsana errores en local.
 
