@@ -4,7 +4,7 @@ Entorno colaborativo para la dicusión, planificación y resolución de los ejer
 
 ## Flujo de Trabajo
 
-El repositorio contiene la versión actualizada por los colaboradores
+El repositorio contiene la última versión actualizada por los colaboradores
 
 ### Primera vez:
 
@@ -26,9 +26,9 @@ En tu perfil de Github debes tener ya acceso completo al repositorio.
 
 #### Soy Colaborador
 
-Haz `git flecht origin` para traer a tu rama origin/master (local) los cambios que pueda haber en el repositorio remoto
+- Haz `git flecht origin` para traer a tu rama origin/master (local) los cambios que pueda haber en el repositorio remoto
 
-Mézclalo con tu código con `git merge origin/master` (en su caso, resuelve conflictos)
+- Mézclalo con tu código con `git merge origin/master` (en su caso, resuelve conflictos)
 
 - Modifica, actualiza o subsana errores en local
 
