@@ -23,9 +23,12 @@ Haz `git flecht origin` para traer a tu rama origin/master (local) los cambios q
 Mézclalo con tu código con `git merge origin/master` (en su caso, resuelve conflictos)
 
 - Modifica, actualiza o subsana errores en local
+
 - Añade los cambios a tu repositorio local `git add <archivos>`
+
 - Lanza un commit y documenta correctamente los cambios `git commit -m "<mensaje>"`
-- Sincroniza los cambios con el repositorio remoto `git pull origin master`
+
+- Sincroniza los cambios con el repositorio remoto `git push origin master`
 
 #### No soy colaborador
 
@@ -37,8 +40,8 @@ Mézclalo con tu código con `git merge origin/master` (en su caso, resuelve con
 
 - Añade los archivos modificados `git add -A`
 
-- Lanza un commit con los modificaciones y documentalas correctamente con un mensaje completo `git commit -m <mensaje>`
+- Lanza un commit con los modificaciones y documéntalas correctamente con un mensaje completo `git commit -m <mensaje>`
 
-- Accede a tu repositorio en Github.com y localiza y pulsa sobre el botón "Pull Request" (recuerda que tu repositorio es un Fork del repositorio del proyecto colaborativo.
+- Accede a tu repositorio en Github.com y localiza y pulsa sobre el botón "Pull Request" (recuerda que tu repositorio es un Fork del repositorio del proyecto colaborativo).
 
-- Completa los datos y envía un mensaje al administrador del proyecto quien decidirá si absorve o no tus cambios propuestos 
+- Completa los datos del `pull request` e informa debidamente al administrador del proyecto quien decidirá si absorve o no tu propuesta de cambios. 
