@@ -200,6 +200,14 @@ public class Main {
                     System.out.println(mejorRacha(a));
                 }
                 break;
+                case 14: {
+                    Random r = new Random();
+                    int a;
+                    a = r.nextInt(901) + 100;
+                    System.out.println("Numeros primos desde 0 a " + a +": ");
+                    numerosPrimosPro(a);
+                }
+                break;
                 default: {
                     // opcion no válida
                 }
@@ -207,6 +215,21 @@ public class Main {
         }
     }
 
+    public static void numerosPrimosPro(int a)
+    {
+        int[] b;
+        b = new int[a + 1];
+        for (int i = 2; i < a; i++) {
+            if(b[i]==0)
+            {
+                System.out.print(i);
+                System.out.print(" ");
+                for (int j = i; j < a; j = j + i) {
+                    b[j] = -1;
+                }
+            }
+        }
+    }
 
     public static int mejorRacha(int[] a)
     {
