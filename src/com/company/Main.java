@@ -7,12 +7,23 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        String ANSI_RED="\u001B[31m";
+        String ANSI_GREEN="\u001B[32m";
+        String ANSI_PURPLE="\u001B[35m";
+        String ANSI_PURPLE_BACKGROUND="\u001B[45m";
+        String ANSI_YELLOW="\u001B[33m";
+        String ANSI_RESET="\u001B[0m";
+        String ANSI_YELLOW_BACKGROUND="\u001B[43m";
         Scanner sc = new Scanner(System.in);
         int opcion;
         boolean continuar = true;
         while (continuar) {
             System.out.println();
+            System.out.print(ANSI_PURPLE_BACKGROUND);
+            System.out.print(ANSI_YELLOW);
             System.out.println("MENÚ EJERCICIOS ADICIONALES DE ARRAYS");
+            System.out.print(ANSI_YELLOW_BACKGROUND);
+            System.out.print(ANSI_PURPLE);
             System.out.print("1. intercambiaParImpar");
             System.out.print("\t2. compruebaTarjeta");
             System.out.print("\t\t\t3. tailArray");
@@ -27,7 +38,10 @@ public class Main {
             System.out.print("\t\t\t12. graficaBarras");
             System.out.print("\t\t\t13. mejorRacha");
             System.out.println("\t\t\t14. numerosPrimosPro");
+            System.out.print(ANSI_PURPLE_BACKGROUND);
+            System.out.print(ANSI_YELLOW);
             System.out.println("0. Finalizar");
+            System.out.print(ANSI_RESET);
             System.out.print("Indique opcion: ");
             opcion = sc.nextInt();
             switch (opcion) {
@@ -173,7 +187,17 @@ public class Main {
                     int[] a;
                     a = new int[10];
                     rellenaAleatorio2(a, 0, 10);
+                    escribeArray(a);
                     graficaBarras(a);
+                }
+                break;
+                case 13: {
+                    int[] a;
+                    a = new int[16];
+                    rellenaAleatorio2(a, 0, 4);
+                    escribeArray(a);
+                    System.out.print("Mejor racha: ");
+                    System.out.println(mejorRacha(a));
                 }
                 break;
                 default: {
@@ -183,8 +207,31 @@ public class Main {
         }
     }
 
+
+    public static int mejorRacha(int[] a)
+    {
+        int victoria = 0;
+        int racha = 0;
+        // Recibimos un array con un número par de elementos
+        // Y lo recorremos de 2 en 2 elementos
+        for (int i = 0; i < a.length; i = i + 2) {
+            if (a[i] > a[i + 1])
+            {
+                victoria++;
+                if (racha < victoria) racha = victoria;
+            }
+            else
+            {
+                victoria = 0;
+            }
+        }
+        return racha;
+    }
+
     public static void graficaBarras(int[] a) {
         // comprobación de rango
+        String ANSI_RED="\u001B[31m";
+        String ANSI_GREEN="\u001B[32m";
         if(maxArray(a)>10 || minArray(a)<0) {
             System.out.println("Error. Notas no permitidas");
         } else {
@@ -192,8 +239,6 @@ public class Main {
                 if(a[i]<10) System.out.print(" ");
                 System.out.print(a[i] + " ");
                 // opcional
-                String ANSI_RED="\u001B[31m";
-                String ANSI_GREEN="\u001B[32m";
                 String color;
                 if(a[i]>5){
                     color = ANSI_GREEN;
