@@ -1,3 +1,42 @@
 # ejercicios-arrays
 
 Entorno colaborativo para la dicusión, planificación y resolución de los ejercicios en la asignatura de Programación del Ciclo Superior de Desarrollo de Aplicaciones Web.
+
+## Flujo de Trabajo
+
+El repositorio contiene la versión actualizada por los colaboradores
+
+### Primera vez:
+
+### Después de la primera vez:
+
+#### Soy Colaborador
+
+En tu perfil de Github debes tener ya acceso completo al repositorio.
+
+Haz `git clone` del repositorio remoto en local
+
+Sincroniza tu repositorio local con el remoto con `git remote add origin https://github.com/...`
+
+Haz `git flecht origin` para traer a tu rama origin/master (local) los cambios que pueda haber en el repositorio remoto
+
+Mézclalo con tu código con `git merge origin/master` (en su caso, resuelve conflictos)
+
+- Modifica, actualiza o subsana errores en local
+- Añade los cambios a tu repositorio local `git add <archivos>`
+- Lanza un commit y documenta correctamente los cambios `git commit -m "<mensaje>"`
+- Sincroniza los cambios con el repositorio remoto `git pull origin master`
+
+#### No soy colaborador
+
+- Haz `git clone` del repositorio remoto en local
+
+- Sincroniza tu repositorio local con **tu** repositorio remoto en GitHub con `git remote add origin https://gitbub.com/*tu_usuario*/*tu_repositorio*`
+
+- Modifica, actualiza o subsana errores en local.
+
+- Añade los archivos modificados `git add -A`
+
+- Lanza un commit con los modificaciones y documentalas correctamente con un mensaje completo `git commit -m <mensaje>`
+
+- Accede a tu repositorio en Github.com y pulsa el botón "Pull Request"
