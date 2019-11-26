@@ -1,6 +1,5 @@
 package com.company;
 
-import javax.imageio.ImageTranscoder;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -208,10 +207,80 @@ public class Main {
                     numerosPrimosPro(a);
                 }
                 break;
+                case 15: {
+                    Random r = new Random();
+                    int ale;
+                    ale = r.nextInt(100) + 100;
+                    int[] a;
+                    a = new int[ale];
+                    sucesionFibonacci(a);
+                    System.out.println("Nº de elementos: " + ale);
+                    escribeArray(a);
+                }
+                break;
+                case 16: {
+                    int[] a;
+                    a = new int[16];
+                    rellenaAleatorio2(a,0,10);
+                    System.out.println("Yankees vs Houston");
+                    escribeArray(a);
+                    System.out.print("Ganador: ");
+                    System.out.println(seriesMundiales("Yankees", "Houston", a));
+                }
+                break;
                 default: {
                     // opcion no válida
                 }
             }
+        }
+    }
+
+    public static String seriesMundiales(String local, String visitante, int[] a)
+    {
+        // El array es impar
+        if(a.length%2==0)
+        {
+            int vV = 0;
+            int vL = 0;
+            for (int i = 0; i < a.length; i = i +2) {
+                if (a[i]!=a[i+1])
+                {
+                    if (a[i] > a[i + 1]) {
+                        vV++;
+                    } else {
+                        vL++;
+                    }
+                }
+                else
+                {
+                    return "Error: En el Beisbol no puede haber empates";
+                }
+            }
+            if(vV > vL)
+            {
+                return visitante;
+            }
+            else if(vV < vL)
+            {
+                return local;
+            }
+            else
+            {
+                return "Empate";
+            }
+        }
+        else
+        {
+            return "Error: El número de elementos es impar";
+        }
+    }
+
+    public static void sucesionFibonacci(int[] a)
+    {
+        a[0] = 0;
+        a[1] = 1;
+        for (int i = 2; i < a.length; i++) {
+            a[i] = a[i - 1] + a [i - 2];
         }
     }
 
@@ -335,18 +404,24 @@ public class Main {
         int[] b;
         b = new int[a.length];
         int j = 0;
-        int maxA = maxArray(a);
         for (int i = 0; i < a.length; i++) {
-            if (contiene(b, a[i])) {
-                b[j] = maxA + 1;
-                j++;
-            } else {
+
+            if (!contiene2(b, a[i], j))
+            {
                 b[j] = a[i];
                 j++;
             }
         }
-        b = eliminaElementosArray(b, maxA + 1);
+        b = subArray(b,0, j);
         return b;
+    }
+
+    public static boolean contiene2(int[] a, int b, int pos) {
+        boolean devuelve = false;
+        for (int i = 0; i < pos; i++) {
+            if (a[i] == b) devuelve = true;
+        }
+        return devuelve;
     }
 
     public static void tachaElementosNoComunes(int[] a, int[] b) {
